@@ -41,7 +41,7 @@ def read_and_store_data():
     fuel_pressure_value = fuel_pressure_response.value.magnitude
     fuel_type_value = fuel_type_response.value.magnitude
 
-    query = "INSERT INTO obd_data (speed, rpm, coolant_temp,oil_temp,fuel_status,fuel_pressure,fuel_type) VALUES (%s, %s, %s, %s, %s, %s, %s,)"
+    query = "INSERT INTO obd_data_1 (speed, rpm, coolant_temp,oil_temp,fuel_status,fuel_pressure,fuel_type) VALUES (%s, %s, %s, %s, %s, %s, %s,)"
     values = (speed_value, rpm_value, coolant_temp_value, oil_temp_value, fuel_status_value, fuel_pressure_value, fuel_type_value )
 
     cursor.execute(query, values)
